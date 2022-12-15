@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/ar.js-aframe/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AR.js Aframe</title>
+  </head>
+  <script src="/build/aframe.min.js"></script>
+  <script src="/build/aframe-ar.min.js"></script>
+  <script src="/build/aframe-extras.min.js"></script>
+  <body style="margin: 0px; overflow: hidden">
+    <a-scene>
+      <a-assets>
+        <a-asset-item id="tree" src="./logo_anim4.glb"></a-asset-item>
+      </a-assets>
+      <a-marker type="pattern" url="./pattern-marker.patt">
+        <a-entity
+          position="0 0 0"
+          rotation="0 0 0"
+          scale="0.25 0.25 0.25"
+          gltf-model="#tree"
+          animation-mixer
+        >
+        </a-entity>
+      </a-marker>
+
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>
